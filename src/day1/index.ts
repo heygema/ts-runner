@@ -8,11 +8,10 @@ export default async function main() {
     return Math.floor(input / 3) - 2;
   }
 
-  let inputs = (await getInput(inputPath))
+  return (await getInput(inputPath))
     .split('\n')
+    .filter(massStr => massStr !== '')
     .map(Number)
     .map(fuelCounter)
-    .reduce((acc, current) => acc + current, 0);
-
-  return inputs;
+    .reduce((acc, current) => acc + current, 0) as number;
 }
