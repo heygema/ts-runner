@@ -1,18 +1,12 @@
-import * as fs from 'fs';
 import * as path from 'path';
-
-function getInput() {
-  let inputPath = path.join(__dirname, './input.txt');
-  fs.readFile(inputPath, 'utf-8', (err, data) => {
-    if (err) {
-      console.log('error >>>', err);
-    }
-
-    console.log('data >>>', data);
-  });
-}
+import {getInput} from '../utils';
 
 export default async function main() {
-  getInput();
-  console.log('hello');
+  let inputPath = path.join(__dirname, './input.txt');
+  let inputs = (await getInput(inputPath))
+    .split('\n')
+    .map(Number)
+    .slice(1, 10);
+
+  console.log('hello', inputs);
 }
