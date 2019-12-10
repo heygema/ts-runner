@@ -3,10 +3,16 @@ import {getInput} from '../utils';
 
 export default async function main() {
   let inputPath = path.join(__dirname, './input.txt');
+
+  function fuelCounter(input: number) {
+    return Math.floor(input / 3) - 2;
+  }
+
   let inputs = (await getInput(inputPath))
     .split('\n')
     .map(Number)
-    .slice(1, 10);
+    .map(fuelCounter)
+    .reduce((acc, current) => acc + current, 0);
 
-  console.log('hello', inputs);
+  return inputs;
 }
