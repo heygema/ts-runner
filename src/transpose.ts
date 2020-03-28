@@ -1,5 +1,5 @@
 function transpose(input: number[][]) {
-  let result = [];
+  let result: number[][] = [];
   let step = 0;
   let prevRow = Array.isArray(input[0]) && input[0].length;
   let prevColumn = input.length;
