@@ -2,6 +2,6 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "lib",
-    "sourceMap": true
+    "sourceMap": false
   }
 }
