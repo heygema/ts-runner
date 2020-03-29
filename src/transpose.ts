@@ -1,4 +1,4 @@
-function transpose(input: number[][]) {
+export function transpose(input: number[][]) {
   let result: number[][] = [];
   let step = 0;
   let prevRow = Array.isArray(input[0]) && input[0].length;

@@ -7,7 +7,8 @@
     "sync": "rsync -avz --exclude '**.ts' ./src/ ./lib/",
     "start": "tsc && yarn sync && node -r esm runner",
     "watch": "tsc --watch & nodemon -r esm runner",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:test": "jest --passWithNoTests --watch",
+    "test": "jest --passWithNoTests"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,10 @@
     "esm": "^3.2.25",
     "nodemon": "^2.0.2",
     "typescript": "^3.7.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "jest": "^25.2.3",
+    "ts-jest": "^25.2.1"
   }
 }
