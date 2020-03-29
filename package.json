@@ -6,6 +6,7 @@
   "scripts": {
     "sync": "rsync -avz --exclude '**.ts' ./src/ ./lib/",
     "start": "tsc && yarn sync && node -r esm runner",
+    "watch": "tsc --watch & nodemon -r esm runner",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,6 +15,7 @@
   "dependencies": {
     "@types/node": "^12.12.16",
     "esm": "^3.2.25",
+    "nodemon": "^2.0.2",
     "typescript": "^3.7.3"
   }
 }
