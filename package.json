@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "sync": "rsync -avz --exclude '**.ts' ./src/ ./lib/",
     "prestart": "tsc && pnpm sync",
     "exe": "node -r esm runner",
