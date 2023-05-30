@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sync": "rsync -avz --exclude '**.ts' ./src/ ./lib/",
-    "start": "tsc && yarn sync && node -r esm runner",
+    "prestart": "tsc && pnpm sync",
+    "exe": "node -r esm runner",
     "watch": "tsc --watch & nodemon -r esm runner",
     "watch:test": "jest --passWithNoTests --watchAll",
     "test": "jest --passWithNoTests"

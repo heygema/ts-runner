@@ -22,7 +22,7 @@ export default function main() {
 just execute it
 
 ```
-yarn start day1
+yarn exe day1
 ```
 
 and,
